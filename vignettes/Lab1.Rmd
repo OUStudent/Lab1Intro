@@ -35,7 +35,7 @@ Given a matrix of data, an algorithm is employed to calculate the sample correla
 
 ## Web Link
 Web Link to GitHub Public Repository Address:
-<http://www.rstudio.com>
+<https://github.com/OUStudent/Lab1Intro>
 
 ## Latex
 Sample Mean (1-1):
