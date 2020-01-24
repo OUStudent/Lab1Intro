@@ -1,0 +1,103 @@
+---
+title: "Lab 1 Package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Lab1}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# OU MATH-4793/5793
+The R code used to load the package is the following:
+```{r setup}
+library(Lab1Intro)
+```
+
+## Package Functions Descriptions
+
+### SampleMeanVector
+This function takes in a dataframe or matrix, and returns a vector of the means from the columns. Calling the function would look like the following:
+
+### SampleBiasedCovarianceMatrix
+Given a matrix of data, an algorithm is employed to calculate the sample covariance and variance (biased) matrix. The variance values are located on the diagonal of the matrix, $x_{11}$,$x_{22}$...$x_{pp}$; while the covariance values are located in the other positions. Note: Uses SampleMeanVector function.
+
+### SampleCorrelationMatrix
+Given a matrix of data, an algorithm is employed to calculate the sample correlation coefficient matrix. Note: Uses SampleBiasedCovarianceVarianceMatrix function.
+
+# Lab 1 Work
+
+## Web Link
+Web Link to GitHub Public Repository Address:
+<http://www.rstudio.com>
+
+## Latex
+Sample Mean (1-1):
+
+$$
+\bar x_k = \frac{1}{n} \sum_{j=1}^n x_{jk} \ \ k =1,2,...,p
+$$
+
+Sample Covariance (1-4):
+
+$$
+s_{jk} = \frac{1}{n} \sum_{j=1}^n (x_{ji}-\bar x_i)(x_{jk}-\bar x_k)
+$$
+
+Pearson's Product Moment Correlation Coefficient (1-5):
+
+$$
+r_{ik}=\frac{S_{ik}}{\sqrt{S_{ii}}\sqrt{S_{kk}}}=\frac{\sum_{j=1}^n (x_{ji}-\bar x_i)(x_{jk}-\bar x_k)}{\sqrt{\sum_{j=1}^n(x_{ji}-\bar x_i)^2}\sqrt{\sum_{j=1}^n(x_{jk}-\bar x_k)^2}}
+$$
+
+Figure (3-27):
+
+$$
+S=\frac{1}{n-1} X^{'}(I-\frac{1}{n}11^{'})X 
+$$
+
+Figure (3-28):
+
+$$
+D^{1/2}_{(p\ x \ p)}=
+\begin{bmatrix}
+  \sqrt{S_{11}} & 0 & \dots & 0 \\ 
+  \vdots & \sqrt{S_{22}} & \dots & 0\\ 
+  \vdots & \vdots & \ddots & \vdots \\
+  0 & 0 & \dots & 0.77\\ 
+\end{bmatrix}
+$$
+
+Figure (3-29):
+
+$$
+R = D^{-1/2}SD^{-1/2}
+$$
+
+## Using Package Functions for data given in Table 1.2
+Loading the file and creating the data frame.
+```{r}
+x=read.table("Lab1.DAT",header=FALSE)
+```
+
+### Sample Mean
+```{r}
+Lab1Intro::SampleMeanVector(x)
+```
+
+### Sample Covariance (Biased)
+```{r}
+Lab1Intro::SampleBiasedCovarianceVariance(x)
+```
+
+### Sample Correlation
+```{r}
+Lab1Intro::SampleCorrelationMatrix(x)
+```
+

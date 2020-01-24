@@ -8,7 +8,7 @@
 #'
 #' @param x A Matrix, where each variable represents a column
 #'
-#' @return A vector of the sample means
+#' @return A vector of the sample means Test
 #' @export
 #'
 #' @examples

@@ -10,7 +10,7 @@ SampleCorrelationMatrix(x)
 \item{x}{A Matrix, where each variable represents a column}
 }
 \value{
-A vector of the sample means
+A vector of the sample means Test
 }
 \description{
 Returns a matrix of the correlation coefficents of the given matrix.
