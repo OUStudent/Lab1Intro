@@ -101,3 +101,12 @@ Lab1Intro::SampleBiasedCovarianceVariance(x)
 Lab1Intro::SampleCorrelationMatrix(x)
 ```
 
+## Assesments
+### Clicker Quizes       10%
+### Assignments          20%
+### Laboratories         10%
+### Mid Semester Exam 1  10%
+### Mid Semester Exam 2  10%
+### Final Exam           30%
+### Projects             10%
+
